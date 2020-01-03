@@ -50,6 +50,19 @@ def movies_with_director_key(name, movies_collection)
   # movie_with_director_name method
 end
 
+  result = []
+  i = 0
+
+  while i < movies_collection.length do
+    movie_data = movies_collection[i]
+    result << movie_with_director_name(name, movie_data)
+    i += 1
+  end
+
+  result
+end
+
+
 
 def gross_per_studio(collection)
   # GOAL: Given an Array of Hashes where each Hash represents a movie,
